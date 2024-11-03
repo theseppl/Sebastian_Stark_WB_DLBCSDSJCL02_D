@@ -23,7 +23,7 @@ public class Main {
 
 		try {
 			whichLocation = inputScanner.nextInt();
-//			nextInt liest keine ganze Zeile, daher muss das Enter in einer zusätzlichen inputScanner verbraucht werden.
+//			nextInt liest keine ganze Zeile, daher muss das Enter in einer zusätzlichen inputScanner verbraucht werden!
 			inputScanner.nextLine();
 		} catch (InputMismatchException e) {
 			System.out.println("\nSie können nur Zahlenwerte eingeben.");
