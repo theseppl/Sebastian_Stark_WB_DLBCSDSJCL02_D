@@ -22,4 +22,4 @@ public class Main {
 		inputScanner.close();
 	}
 }
-// Nicht als statische Methode umgesetzt, weil so die versehentliche Summierung mehrerer Größen bei mehreren Anfragen vermeiden lässt!
+// Nicht als statische Methode umgesetzt, weil so die versehentliche Summierung mehrerer Größen bei mehreren Anfragen vermeiden lässt.
