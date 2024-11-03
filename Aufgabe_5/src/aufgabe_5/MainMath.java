@@ -1,5 +1,6 @@
 package aufgabe_5;
 
+// Klassen des Paketes java.math importieren.
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
