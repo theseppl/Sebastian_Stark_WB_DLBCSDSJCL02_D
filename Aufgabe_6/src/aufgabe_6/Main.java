@@ -7,7 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Main {
-	static String path = "/Users/sebastianstark/eclipseIU/JAVA2/meineDateien/flugdaten1.csv";
+	static String path = "/Users/sebastianstark/eclipseIU/JAVA2/meineDateien/flugdaten2.csv";
 	static File file = new File(path);
 
 	public static void main(String[] args) {
@@ -18,8 +18,31 @@ public class Main {
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			
 			for (String line = bufferedReader.readLine(); line != null; line = bufferedReader.readLine()) {
-				System.out.println(line);
+//				System.out.println(line);
+				String[] aufteilung = line.split(", ");
+				for (String string : aufteilung) {
+					if (string.equals("Lufthansa")) {
+						for (int i = 0; i < aufteilung.length; i++) {
+							if (i == 0) {
+								System.out.println("Flugnummer: " + aufteilung[i].trim());
+							}
+							if (i == 1) {
+								System.out.println("Start-Flughafen: " + aufteilung[i].substring(1, 4));
+							}
+							if (i == 2) {
+								System.out.println("Ziel-Flughafen: " + aufteilung[i].substring(1, 4));
+							}
+							if (i == 3) {
+								System.out.println("Flugdatum: " + aufteilung[i]);
+							}
+							if (i == 4) {
+								System.out.println("Fluggesellschaft: " + aufteilung[i] + "\n");
+							}
+						}
+					}
+				}
 			}
+			
 			
 			bufferedReader.close();
 			fileReader.close();
