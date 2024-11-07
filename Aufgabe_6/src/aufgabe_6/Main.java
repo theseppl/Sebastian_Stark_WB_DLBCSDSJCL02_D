@@ -7,46 +7,52 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Main {
-	static String path = "/Users/sebastianstark/eclipseIU/JAVA2/meineDateien/flugdaten2.csv";
+	static String path = "/Users/sebastianstark/eclipseIU/JAVA2/meineDateien/flugdaten.csv";
 	static File file = new File(path);
+	static StringBuffer flightDataBuffer = new StringBuffer();
+	static String flightReport;
+	static String string;
+	static String searchCriteria = "Lufthansa";
 
 	public static void main(String[] args) {
-		
-//		Daten aus einer vorhandenen Datei auslesen.
+
 		try {
 			FileReader fileReader = new FileReader(file);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
+			System.out.print("Flugnummer \tAbflugort \tZielort \tFlugdatum \t\tFluggesellschaft\n");
+			
+			for (int i = 0; i < 88; i++) {
+				System.out.print("-");
+			}
+			System.out.println();
 			
 			for (String line = bufferedReader.readLine(); line != null; line = bufferedReader.readLine()) {
-//				System.out.println(line);
-				String[] aufteilung = line.split(", ");
-				for (String string : aufteilung) {
-					if (string.equals("Lufthansa")) {
-						for (int i = 0; i < aufteilung.length; i++) {
-							if (i == 0) {
-								System.out.println("Flugnummer: " + aufteilung[i].trim());
-							}
-							if (i == 1) {
-								System.out.println("Start-Flughafen: " + aufteilung[i].substring(1, 4));
-							}
-							if (i == 2) {
-								System.out.println("Ziel-Flughafen: " + aufteilung[i].substring(1, 4));
-							}
-							if (i == 3) {
-								System.out.println("Flugdatum: " + aufteilung[i]);
-							}
+				String[] flightDataArray = line.split(", ");
+				for (int i = 0; i < flightDataArray.length; i++) {
+					flightDataArray[i] = flightDataArray[i].trim();
+					if (flightDataArray[i].contains("\"")) {
+						flightDataArray[i] = flightDataArray[i].substring(flightDataArray[i].indexOf("\"")+1, flightDataArray[i].lastIndexOf("\""));
+					}
+				}
+				for (String string : flightDataArray) {
+					if (string.equals(searchCriteria)) {
+						for (int i = 0; i < flightDataArray.length; i++) {
 							if (i == 4) {
-								System.out.println("Fluggesellschaft: " + aufteilung[i] + "\n");
+								flightDataBuffer.append(flightDataArray[i] + "\n");
+							} else {
+								flightDataBuffer.append(flightDataArray[i] + "\t\t");
 							}
 						}
 					}
 				}
 			}
-			
-			
+
+			flightReport = flightDataBuffer.toString();
+			System.out.println(flightReport);
+
 			bufferedReader.close();
 			fileReader.close();
-			
+
 		} catch (FileNotFoundException e) {
 			System.out.println("Datei nicht gefunden.");
 			e.printStackTrace();
@@ -54,7 +60,5 @@ public class Main {
 			System.out.println("Datei nicht gefunden.");
 			e.printStackTrace();
 		}
-
 	}
-
 }
