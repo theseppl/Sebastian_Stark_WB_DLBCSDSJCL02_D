@@ -1,0 +1,51 @@
+Flugnummer, Abflugort, Zielort, Flugdatum, Fluggesellschaft
+LH1001, "FRA", "JFK", 2024-11-01,   Lufthansa
+UA1002, "MUC", "LAX", 2024-11-01, United Airlines
+AF1003, "BER", "SFO", 2024-11-01, Air France
+BA1004, "DUS", "ORD", 2024-11-01, British Airways
+KL1005, "HAM", "ATL", 2024-11-01, KLM
+DL1006, "STR", "MIA", 2024-11-01, Delta Air Lines
+IB1007, "CGN", "BOS", 2024-11-01, Iberia
+AZ1008, "NUE", "SEA", 2024-11-01, Alitalia
+                       LH1009, "DTM", "IAD", 2024-11-01, Lufthansa
+UA1010, "FMO", "DFW", 2024-11-01, United Airlines
+IB1031, "FRA", "CLE", 2024-11-01, Iberia
+AZ1032, "MUC", "IND", 2024-11-01, Alitalia
+LH1033, "BER", "MKE", 2024-11-01, Lufthansa
+UA1034, "DUS", "PIT", 2024-11-01, United Airlines
+AF1035, "HAM", "CVG", 2024-11-01, Air France
+BA1036, "STR", "BDL", 2024-11-01, British Airways
+KL1037, "CGN", "SMF", 2024-11-01, KLM
+DL1038, "NUE", "PBI", 2024-11-01, Delta Air Lines
+IB1039, "DTM", "BNA", 2024-11-01, Iberia
+AZ1040, "FMO", "JAX", 2024-11-01, Alitalia
+AF1011, "FRA", "DEN", 2024-11-02, Air France
+BA1012, "MUC", "PHX", 2024-11-02, British Airways
+KL1013, "BER", "LAS", 2024-11-02, KLM
+DL1014, "DUS", "EWR", 2024-11-02, Delta Air Lines
+IB1015, "HAM", "HOU", 2024-11-02, Iberia
+AZ1016, "STR", "SAN", 2024-11-02, Alitalia
+LH1017, "CGN", "SLC", 2024-11-02, Lufthansa
+UA1018, "NUE", "CLT", 2024-11-02, United Airlines
+AF1019, "DTM", "RDU", 2024-11-02, Air France
+BA1020, "FMO", "STL", 2024-11-02, British Airways
+LH1041, "FRA", "MEM", 2024-11-02, Lufthansa
+UA1042, "MUC", "RIC", 2024-11-02, United Airlines
+AF1043, "BER", "OMA", 2024-11-02, Air France
+BA1044, "DUS", "MCI", 2024-11-02, British Airways
+KL1045, "HAM", "TUS", 2024-11-02, KLM
+DL1046, "STR", "ABQ", 2024-11-02, Delta Air Lines
+IB1047, "CGN", "BUF", 2024-11-02, Iberia
+AZ1048, "NUE", "OKC", 2024-11-02, Alitalia
+LH1049, "DTM", "ORF", 2024-11-02, Lufthansa
+UA1050, "FMO", "GEG", 2024-11-02, United Airlines
+KL1021, "FRA", "TPA", 2024-11-03, KLM
+DL1022, "MUC", "MCO", 2024-11-03, Delta Air Lines
+IB1023, "BER", "PDX", 2024-11-03, Iberia
+AZ1024, "DUS", "BWI", 2024-11-03, Alitalia
+LH1025, "HAM", "SNA", 2024-11-03, Lufthansa
+UA1026, "STR", "OAK", 2024-11-03, United Airlines
+AF1027, "CGN", "MSY", 2024-11-03, Air France
+BA1028, "NUE", "CMH", 2024-11-03, British Airways
+KL1029, "DTM", "SJC", 2024-11-03, KLM
+DL1030, "FMO", "SAT", 2024-11-03, Delta Air Lines

@@ -7,7 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Main {
-	static String path = "/Users/sebastianstark/eclipseIU/JAVA2/meineDateien/flugdaten.csv";
+	static String path = "flugdaten.csv";
 	static File file = new File(path);
 	static StringBuffer flightDataBuffer = new StringBuffer();
 	static String flightReport;
