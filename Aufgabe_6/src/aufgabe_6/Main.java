@@ -17,27 +17,34 @@ public class Main {
 	public static void main(String[] args) {
 
 		try {
+//			Aufbau der Pipeline
 			FileReader fileReader = new FileReader(file);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
-			System.out.print("Flugnummer \tAbflugort \tZielort \tFlugdatum \t\tFluggesellschaft\n");
 			
+			System.out.print("Flugnummer \tAbflugort \tZielort \tFlugdatum \t\tFluggesellschaft\n");
 			for (int i = 0; i < 88; i++) {
 				System.out.print("-");
 			}
 			System.out.println();
 			
+//			Zeilenweises Einlesen des Dateiinhaltes
 			for (String line = bufferedReader.readLine(); line != null; line = bufferedReader.readLine()) {
+				
+//				Aufbereiten des Dateiinhaltes mittels split(), trim(), contains() und substring()
 				String[] flightDataArray = line.split(", ");
 				for (int i = 0; i < flightDataArray.length; i++) {
 					flightDataArray[i] = flightDataArray[i].trim();
 					if (flightDataArray[i].contains("\"")) {
-						flightDataArray[i] = flightDataArray[i].substring(flightDataArray[i].indexOf("\"")+1, flightDataArray[i].lastIndexOf("\""));
+						flightDataArray[i] = flightDataArray[i].substring(flightDataArray[i].indexOf("\"")+1, 
+								flightDataArray[i].lastIndexOf("\""));
 					}
 				}
+				
+//				Formatieren und Hinzufügen der aufbereiteten Strings zur StringBuffer-Instanz
 				for (String string : flightDataArray) {
 					if (string.equals(searchCriteria)) {
 						for (int i = 0; i < flightDataArray.length; i++) {
-							if (i == 4) {
+							if (i == flightDataArray.length - 1) {
 								flightDataBuffer.append(flightDataArray[i] + "\n");
 							} else {
 								flightDataBuffer.append(flightDataArray[i] + "\t\t");
@@ -47,6 +54,7 @@ public class Main {
 				}
 			}
 
+//			Erstellung eines String-Objektes aus der StringBuffer-Instanz
 			flightReport = flightDataBuffer.toString();
 			System.out.println(flightReport);
 
