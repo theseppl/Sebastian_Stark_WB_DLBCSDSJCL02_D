@@ -7,18 +7,18 @@ public class MainString {
         		+ "Unser Team steht Ihnen gerne zur Verfügung und hilft Ihnen so schnell wie möglich weiter. "
         		+ "Wir freuen uns auf Ihre Nachricht!";
         
-//      Die Methode contains()
+//      Die Methode contains().
         if (text.contains("fragen@fernstudium.de")) {
             System.out.println("Die E-Mail-Adresse fragen@fernstudium.de ist im Text enthalten.");
         }
         
-//      Die Methode indexOf()
+//      Die Methode indexOf().
         int index = text.indexOf("support@technik.de");
         if (index != -1) {
             System.out.println("Die E-Mail-Adresse support@technik.de beginnt bei Index: " + index);
         }
         
-//      Die Methode substring()
+//      Die Methode substring().
         String email = text.substring(text.indexOf("fragen@fernstudium.de"), text.indexOf(". "));
         System.out.println("Gefundene E-Mail-Adresse: " + email);
     }
